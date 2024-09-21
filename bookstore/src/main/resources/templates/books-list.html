@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Books</title>
+
+  <style type="text/css">
+    table {
+      width: 700px;
+      border-collapse: collapse;
+    }
+
+    #col1 {
+      width: 350px
+    }
+    #col2 {
+      width: 200px
+    }
+    #col3 {
+      width: 150px
+    }
+
+    table th {
+      text-align: center;
+      vertical-align: center;
+    }
+
+    table tr, td{
+      text-align: center;
+      vertical-align: center;
+    }
+    table tr, td:first-child{
+      text-align: left;
+      vertical-align: center;
+    }
+
+    table th, tr, td {
+      padding: 3px;
+      border: 1px solid black;
+    }
+
+    form input {
+      width: 200px;
+     }
+
+    form #button {
+      width: 100px;
+     }
+  </style>
+
+
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Author</th>
+      <th>Pages</th>
+      <th></th>
+      <th></th>
+    </tr>
+    <tr th:each = "book: ${books}">
+      <td th:text = "${book.name}"/>
+      <td th:text = "${book.author}"/>
+      <td th:text = "${book.pages}"/>
+      <td><a th:href="@{'/edit-form/' + ${book.id}}"/>Edit</td>
+      <td><a th:href="@{'/delete/' + ${book.id}}"/>Delete</td>
+
+    </tr>
+  </table>
+
+  <a href="/create-form">Add book</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
