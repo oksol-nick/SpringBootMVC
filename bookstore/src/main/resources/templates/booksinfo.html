@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+      <meta charset="UTF-8">
+      <title>MyBooks</title>
+  </head>
+
+  <style type="text/css">
+    table {
+      width: 700px;
+      border-collapse: collapse;
+    }
+
+    #col1 {
+      width: 350px
+    }
+    #col2 {
+      width: 200px
+    }
+    #col3 {
+      width: 150px
+    }
+
+    table th {
+      text-align: center;
+      vertical-align: center;
+    }
+
+    table tr, td{
+      text-align: center;
+      vertical-align: center;
+    }
+    table tr, td:first-child{
+      text-align: left;
+      vertical-align: center;
+    }
+
+    table th, tr, td {
+      padding: 3px;
+      border: 1px solid black;
+    }
+
+    form input {
+      width: 200px;
+     }
+
+    form #button {
+      width: 100px;
+     }
+  </style>
+
+  <body>
+    <h2>Список книг</h2>
+
+      <table>
+        <tr>
+          <th id="col1">Название книги</th>
+          <th id="col2">Автор книги</th>
+          <th id="col3">Количество страниц в книге</th>
+        </tr>
+        <tr>
+          <td>Spring in Action</td>
+          <td>Craig Walas</td>
+          <td>544</td>
+        </tr>
+        <tr>
+          <td>The Complete Reference Java. Twelfth Edition</td>
+          <td>Herbert Schildt</td>
+          <td>1344</td>
+        </tr>
+        <tr>
+          <td>Classic Computer Science Problems in Java</td>
+          <td>David Kopec</td>
+          <td>288</td>
+        </tr>
+      </table><br><br>
+
+    <h3>Добавить книгу</h3>
+
+      <form>
+        <label for="name">Название книги</label><br>
+        <input id="name" type="text" name="name"/><br><br>
+
+        <label for="author">Автор книги</label><br>
+        <input id="author" type="text" name="author"/><br><br>
+
+        <label for="pages">Количество страниц в книге</label><br>
+        <input id="pages" type="text" name="pages"/><br><br>
+
+        <input id="button" type="submit" value="Сохранить">
+
+      </form>
+  </body>
+</html>
